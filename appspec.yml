@@ -1,15 +1,20 @@
 version: 0.0
 os: linux
 
-#jghjg
-
-#frhg
+# Hooks to stop and start the container
 hooks:
   BeforeInstall:
     - location: scripts/stop_container.sh
       timeout: 300
       runas: root
+      # Optionally, pass commit ID to the script
+      environment:
+        COMMIT_ID: "{{commit_id}}"
+
   AfterInstall:
     - location: scripts/start_container.sh
       timeout: 300
       runas: root
+      # Optionally, pass commit ID to the script
+      environment:
+        COMMIT_ID: "{{commit_id}}"
