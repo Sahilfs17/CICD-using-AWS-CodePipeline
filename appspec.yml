@@ -3,7 +3,7 @@ os: linux
 
 #jghjg
 
-#fr
+#frhg
 hooks:
   BeforeInstall:
     - location: scripts/stop_container.sh
