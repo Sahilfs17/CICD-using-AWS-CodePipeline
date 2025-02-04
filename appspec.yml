@@ -1,7 +1,7 @@
 version: 0.0
 os: linux
 
-# Hooks to stop and start the containers th
+# Hooks to stop and start the containers the
 hooks:
   BeforeInstall:
     - location: scripts/stop_container.sh
